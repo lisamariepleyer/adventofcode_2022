@@ -13,13 +13,15 @@ calories.per.elf <- data.table(
                          function(i) {
                            return(sum(as.numeric(data[(elf.separators[i]+1):(elf.separators[i+1]-1)])))})))
 
-print(paste("The elf that is carrying the most calories is carrying", 
-            max(calories.per.elf$calories),
-            "calories."))
+cat("The elf that is carrying the most calories is carrying", 
+    max(calories.per.elf$calories),
+    "calories.\n",
+    sep = " ")
+
 
 ## PART 2
 
-print(paste("The top three elves are carrying a total of", 
-            sum(calories.per.elf[order(calories, decreasing = T)][1:3, calories]),
-            "calories."))
-
+cat("The top three elves are carrying a total of", 
+    sum(calories.per.elf[order(calories, decreasing = T)][1:3, calories]),
+    "calories.\n",
+    sep = " ")
