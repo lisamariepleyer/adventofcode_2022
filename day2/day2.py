@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-### DAY 1
+### DAY 2
 
 ## PART 1
 
