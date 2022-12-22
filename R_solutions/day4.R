@@ -2,9 +2,12 @@ library(data.table)
 
 ### DAY 4
 
-## PART 1
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
 
-data <- fread("data.txt", header = F, col.names = c("elf.one", "elf.two"))
+data <- fread(data, header = F, col.names = c("elf.one", "elf.two"))
+
+## PART 1
 
 range.endpoints <- function(range) {
   return(as.integer(strsplit(range, split = "-")[[1]]))

@@ -2,11 +2,15 @@ library(data.table)
 
 ### DAY 5
 
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
+
+data <- readLines(data)
+
 ## PART 1
 
 # PARSE INPUT DATA TO DATA.TABLE AND MATRIX FOR EASY ACCESS
 
-data <- readLines("data.txt")
 moves <- data[(which(data == "")+1):length(data)]
 stacks <- data[1:(which(data == "")-2)]
 

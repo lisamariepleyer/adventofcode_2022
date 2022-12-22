@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import string
 from itertools import chain
+import sys
+
+data = [arg for arg in sys.argv[1:] if not arg.startswith("-")][0]
 
 ### DAY 3
 
@@ -11,7 +14,7 @@ priority = list(chain.from_iterable([
     list(string.ascii_uppercase)
 ]))
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     valueCommonItems = 0
 
     for line in f:
@@ -25,7 +28,7 @@ print(f"The sum of the misplaced item types of all rucksacks is {valueCommonItem
 
 groupSize = 3
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     allRucksacks = list()
     valueCommonItems = 0
 

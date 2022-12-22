@@ -1,3 +1,5 @@
-day*/data*.*
+data/
 .idea/
-day*/.Rhistory
+.Rhistory
+.Rproj.user
+adventofcode_2022.Rproj

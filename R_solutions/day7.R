@@ -2,9 +2,12 @@ library(data.table)
 
 ### DAY 7
 
-## PART 1
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
 
-input <- readLines("data.txt")
+input <- readLines(data)
+
+## PART 1
 
 get.file <- function(x, size = F) {
   x <- strsplit(x, split = " ")[[1]]

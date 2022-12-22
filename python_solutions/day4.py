@@ -2,6 +2,10 @@
 
 ### DAY 4
 
+import sys
+
+data = [arg for arg in sys.argv[1:] if not arg.startswith("-")][0]
+
 ## PART 1
 
 def elfRange(endpoints):
@@ -10,7 +14,7 @@ def elfRange(endpoints):
     listRange = list(range(enpoints[0], enpoints[1]+1))
     return(listRange)
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     areContainedInOther = 0
 
     for line in f:
@@ -29,7 +33,7 @@ print(f"In {areContainedInOther} pairs one range is fully contained in the other
 
 ## PART 2
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     areOverlapping = 0
 
     for line in f:

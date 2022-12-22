@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import sys
+
+data = [arg for arg in sys.argv[1:] if not arg.startswith("-")][0]
+
 ### DAY 2
 
 ## PART 1
@@ -31,7 +35,7 @@ def getScoreUsingSign(me, opponent):
 
     return(score)
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     scores = 0
     for line in f:
         opponent = line.split(" ")[0]
@@ -69,7 +73,7 @@ def getScoreUsingOutcome(outcome, opponent):
 
     return(score)
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     scores = 0
     for line in f:
         opponent = line.split(" ")[0]

@@ -2,9 +2,13 @@ library(data.table)
 
 ### DAY 1
 
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
+
+data <- readLines(data)
+
 ## PART 1
 
-data <- readLines("data.txt")
 elf.separators <-c(0, which(data==""), length(data)+1)
 
 calories.per.elf <- data.table(

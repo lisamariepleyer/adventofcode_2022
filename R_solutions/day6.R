@@ -1,9 +1,14 @@
 
 ### DAY 6
 
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
+
+data <- readLines(data)
+
 ## PART 1
 
-signal <- strsplit(readLines("data.txt"), split = "")[[1]]
+signal <- strsplit(data, split = "")[[1]]
 
 find.marker <- function(marker.length) {
   

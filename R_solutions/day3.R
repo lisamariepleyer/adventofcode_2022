@@ -2,9 +2,12 @@ library(data.table)
 
 ### DAY 3
 
-## PART 1
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
 
-data <- readLines("data.txt")
+data <- readLines(data)
+
+## PART 1
 
 priority <- data.table(let=c(letters, LETTERS),
                        val=c(1:52))

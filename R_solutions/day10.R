@@ -1,14 +1,15 @@
-library(data.table)
-
 ### DAY 10
+
+args <- commandArgs(trailingOnly = T)
+data <- args[which(args == "-in") + 1]
+
+data <- readLines(data)
 
 ## PART 1
 
-input <- readLines("data.txt")
-
 X <- 1
 
-for (cmd in input) {
+for (cmd in data) {
   if (cmd == "noop") {
     X <- c(X, X[length(X)])
   } else {

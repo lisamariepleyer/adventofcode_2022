@@ -2,11 +2,15 @@
 
 ### DAY 6
 
+import sys
+
+data = [arg for arg in sys.argv[1:] if not arg.startswith("-")][0]
+
 ## PART 1
 
 signal = list()
 
-with open(r"data.txt", "r") as f:
+with open(data, "r") as f:
     for line in f:
         for letter in line:
             signal.append(letter)

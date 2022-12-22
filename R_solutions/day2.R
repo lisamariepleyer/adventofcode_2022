@@ -2,9 +2,12 @@ library(data.table)
 
 ### DAY 2
 
-## PART 1
+args <- commandArgs(trailingOnly = T)
+input <- args[which(args == "-in") + 1]
 
-data <- fread("data.txt", header = F, col.names = c("opponent", "me"))
+data <- fread(input, header = F, col.names = c("opponent", "me"))
+
+## PART 1
 
 winning <- data.table(
   op = c("A", "B", "C"),
@@ -32,7 +35,7 @@ cat("If my strategy was correct, my total score would be ",
 
 ## PART 2
 
-data <- fread("data.txt", header = F, col.names = c("opponent", "outcome"))
+data <- fread(input, header = F, col.names = c("opponent", "outcome"))
 
 losing <- data.table(
   op = c("A", "B", "C"),
